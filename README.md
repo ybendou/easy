@@ -33,6 +33,16 @@ Train a model on miniimagenet using manifold mixup, self-supervision and cosine 
 
     $ python main.py --dataset-path "dataset path" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME 
 
+## Important Arguments
+Some important arguments for our code.
+
+**Training arguments**
+- `dataset`: choices=['miniimagenet', 'cubfs','tieredimagenet', 'fc100', 'cifarfs']
+- `model`: choices=['resnet12', 'resnet18', 'resnet20', 'wideresnet', 's2m2r']
+
+**Few-shot Classification**
+- `preprocessing`: preprocessing sequence for few shot given as a string, can contain R:relu P:sqrt E:sphering and M:centering
+
 ## Few-shot classification Results
 
 Experimental results on few-shot learning datasets with ResNet-12 backbone. We report our average results with 10000 randomly sampled episodes for both 1-shot and 5-shot evaluations.
