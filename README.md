@@ -3,10 +3,11 @@ This repository is the official implementation Ensemble Augmented-Shot Y-shaped 
 
 EASY proposes a simple methodology, that reaches or even beats state of the art performance on multiple standardized benchmarks of the field, while adding almost no hyperparameters or parameters to those used for training the initial deep learning models on the generic dataset.
 
-## Download datasets 
-Please click the Google Drive link for downloading the following datasets.
-
-## Download models
+## Downloads 
+Please click the Google Drive link for downloads:
+- Datasets: link
+- Features: link
+- Models  : link
 
 ## Testing scripts for EASY
 
