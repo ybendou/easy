@@ -11,7 +11,7 @@ Please click the Google Drive link for downloads:
 
 ## Testing scripts for EASY
 
-### Inductive set using NCM
+### Inductive setup using NCM
 Test features on miniimagenet using Y
 
     $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME
@@ -20,7 +20,7 @@ Test features on miniimagenet using ASY
 
     $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30
 
-### Transductive set using Soft k-means
+### Transductive setup using Soft k-means
 Test features on miniimagenet using Y
 
     $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 100
