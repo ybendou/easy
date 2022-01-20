@@ -4,10 +4,7 @@ This repository is the official implementation Ensemble Augmented-Shot Y-shaped 
 EASY proposes a simple methodology, that reaches or even beats state of the art performance on multiple standardized benchmarks of the field, while adding almost no hyperparameters or parameters to those used for training the initial deep learning models on the generic dataset.
 
 ## Downloads 
-Please click the Google Drive link for downloads:
-- Datasets: link
-- Features: link
-- Models  : link
+Please click the Google Drive link for downloading the features, backbones and datasets.
 
 ## Testing scripts for EASY
 Run scripts to evaluate the features on FSL tasks for Y and ASY. For EY and EASY use the corresponding features.
@@ -20,7 +17,6 @@ Test features on miniimagenet using Y
 Test features on miniimagenet using ASY
 
     $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30
-
 
 ### Transductive setup using Soft k-means
 Test features on miniimagenet using Y
