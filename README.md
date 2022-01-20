@@ -10,6 +10,7 @@ Please click the Google Drive link for downloads:
 - Models  : link
 
 ## Testing scripts for EASY
+Run scripts to evaluate the features on FSL tasks for Y and ASY. For EY and EASY use the corresponding features.
 
 ### Inductive setup using NCM
 Test features on miniimagenet using Y
@@ -20,6 +21,7 @@ Test features on miniimagenet using ASY
 
     $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30
 
+
 ### Transductive setup using Soft k-means
 Test features on miniimagenet using Y
 
@@ -29,7 +31,7 @@ Test features on miniimagenet using ASY
 
     $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 100
 
-## Training scripts for EASY
+## Training scripts for ASY
 Train a model on miniimagenet using manifold mixup, self-supervision and cosine scheduler
 
     $ python main.py --dataset-path "dataset path" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME 
