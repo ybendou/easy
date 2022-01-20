@@ -3,10 +3,39 @@ This repository is the official implementation Ensemble Augmented-Shot Y-shaped 
 
 EASY proposes a simple methodology, that reaches or even beats state of the art performance on multiple standardized benchmarks of the field, while adding almost no hyperparameters or parameters to those used for training the initial deep learning models on the generic dataset.
 
+## Download datasets 
+Please click the Google Drive link for downloading the following datasets.
+
+## Download models
+
+## Testing scripts for EASY
+
+### Inductive
+Test features on miniimagenet using Y
+
+    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME
+
+Test features on miniimagenet using ASY
+
+    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30
+
+### Transductive Soft k-means
+Test features on miniimagenet using Y
+
+    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 100
+
+Test features on miniimagenet using ASY
+
+    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 100
+
+## Training scripts for EASY
+Train a model on miniimagenet using manifold mixup, self-supervision and cosine scheduler
+
+    $ python main.py --dataset-path "dataset path" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME 
+
 ## Few-shot classification Results
 
 Experimental results on few-shot learning datasets with ResNet-12 backbone. We report our average results with 10000 randomly sampled episodes for both 1-shot and 5-shot evaluations.
-
 
 **MiniImageNet Dataset**
 
@@ -53,18 +82,6 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 | method 2 |     **00.00**    |     **00.00**    |
 | method 3  |     **00.00**    |     **00.00**    | 
 | method 4 |     **00.00**    |     **00.00**    | 
-
-
-## Download datasets 
-Please click the Google Drive link for downloading the following datasets.
-
-## Testing scripts for EASY
-
-
-## Training scripts for EASY
-
-
-## Download models
 
 ## Acknowledgment
 
