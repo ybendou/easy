@@ -336,7 +336,7 @@ for i in range(args.runs):
         print(args)
     if args.wandb:
         wandb.init(project="few-shot", 
-            entity="bendouy", 
+            entity=args.wandb, 
             tags=[f'run_{i}', args.dataset], 
             notes=str(vars(args))
             )
