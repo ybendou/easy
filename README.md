@@ -54,6 +54,10 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 | method 2 |     **00.00**    |     **00.00**    |
 | method 3  |     **00.00**    |     **00.00**    | 
 | method 4 |     **00.00**    |     **00.00**    | 
+|:--------:|:------------:|:------------:|
+|S2M2R [12] | 64.93 ± 0.18 | 83.18 ± 0.11 |
+|LR + DC [17] | 68.55 ± 0.55 | 82.88 ± 0.42 |
+|EASY 3×ResNet12 (ours) | 71.75 ± 0.19 | 87.15 ± 0.12 |
 
 **TieredImageNet Dataset**
 
