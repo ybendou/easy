@@ -66,7 +66,8 @@ Some important arguments for our code.
 - `dataset-path`: path of the datasets folder which contains folders of all the datasets.
 
 **Few-shot Classification**
-- `preprocessing`: preprocessing sequence for few shot given as a string, can contain R:relu P:sqrt E:sphering and M:centering
+- `preprocessing`: preprocessing sequence for few shot given as a string, can contain R:relu P:sqrt E:sphering and M:centering using the base data.
+- `postprocessing`: postprocessing sequence for few shot given as a string, can contain R:relu P:sqrt E:sphering and M:centering on the few-shot data, used for transductive setting.
 
 ## Few-shot classification Results
 
