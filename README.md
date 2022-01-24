@@ -21,11 +21,11 @@ Test features on miniimagenet using ASY
 ### Transductive setup using Soft k-means
 Test features on miniimagenet using Y
 
-    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 100
+    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --postprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 100
 
 Test features on miniimagenet using ASY
 
-    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
+    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --postprocessing ME --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
 ## Training scripts for ASY
 Train a model on miniimagenet using manifold mixup, self-supervision and cosine scheduler
