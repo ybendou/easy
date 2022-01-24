@@ -6,6 +6,14 @@ EASY proposes a simple methodology, that reaches or even beats state of the art 
 ## Downloads 
 Please click the [Google Drive link](https://drive.google.com/drive/folders/1fMeapvuR6Rby0HDHd5L74BEXRyiOF942) for downloading the features, backbones and datasets.
 
+Each of the files (backbones and features) have the following prefixes depending on the backbone: 
+
+|  Backbone  | prefix | Number of parameters |  
+|:--------:|:------------:|:------------:|
+| ResNet12 | | 12M|
+| ResNet12(1/sqrt(2)) | small | 6M|
+| ResNet12(1/2) | tiny | 3M|
+
 ## Testing scripts for EASY
 Run scripts to evaluate the features on FSL tasks for Y and ASY. For EY and EASY use the corresponding features.
 
@@ -55,7 +63,7 @@ Some important arguments for our code.
 **Training arguments**
 - `dataset`: choices=['miniimagenet', 'cubfs','tieredimagenet', 'fc100', 'cifarfs']
 - `model`: choices=['resnet12', 'resnet18', 'resnet20', 'wideresnet', 's2m2r']
-- `daatset-path`: path of the datasets folder which contains folders of all the datasets.
+- `dataset-path`: path of the datasets folder which contains folders of all the datasets.
 
 **Few-shot Classification**
 - `preprocessing`: preprocessing sequence for few shot given as a string, can contain R:relu P:sqrt E:sphering and M:centering
