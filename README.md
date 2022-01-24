@@ -10,27 +10,44 @@ Please click the [Google Drive link](https://drive.google.com/drive/folders/1fMe
 Run scripts to evaluate the features on FSL tasks for Y and ASY. For EY and EASY use the corresponding features.
 
 ### Inductive setup using NCM
-Test features on miniimagenet using Y
+Test features on miniimagenet using Y (Resnet12)
 
-    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11' --preprocessing ME
 
-Test features on miniimagenet using ASY
+Test features on miniimagenet using ASY (Resnet12)
 
-    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11' --preprocessing ME --sample-aug 30
+
+Test features on miniimagenet using EY (3xResNet12)
+
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures1.pt11]" --preprocessing ME
+    
+Test features on miniimagenet using EASY (3xResNet12)
+
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures1.pt11]" --preprocessing ME --sample-aug 30
+
 
 ### Transductive setup using Soft k-means
 Test features on miniimagenet using Y
 
-    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 100
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11'--postprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
 Test features on miniimagenet using ASY
 
-    $ python main.py --dataset miniimagenet --model resnet12 --test-features "features path" --preprocessing ME --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11' --postprocessing ME --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
-## Training scripts for ASY
+Test features on miniimagenet using EY
+
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures1.pt11]" --postrocessing ME  --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
+
+Test features on miniimagenet using EASY
+
+    $ python main.py --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures1.pt11]" --postrocessing ME  --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
+
+## Training scripts for Y
 Train a model on miniimagenet using manifold mixup, self-supervision and cosine scheduler
 
-    $ python main.py --dataset-path "dataset path" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME 
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME 
 
 ## Important Arguments
 Some important arguments for our code.
