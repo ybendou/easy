@@ -85,6 +85,20 @@ def preprocess(train_features, features, elements_train=None):
                 train_features = centering(train_features, train_features)
     return features
 
+
+def postprocess(runs):
+    # runs shape: [100, 5, 16, 640]
+    for i in range(len(args.postprocessing)):
+        if args.postprocessing[i] == 'R':
+            runs = torch.relu(runs)
+        if args.postprocessing[i] == 'P':
+            runs = torch.pow(runs, 0.5)
+        if args.postprocessing[i] == 'E':
+            runs = runs/torch.norm(runs, p=2, dim=3, keepdim=True)
+        if args.postprocessing[i] == 'M':
+            runs = runs - runs.reshape(runs.shape[0], -1, runs.shape[-1]).mean(dim=1, keepdim=True).unsqueeze(1)
+    return runs
+
 class LabelSmoothingLoss(nn.Module):
     def __init__(self, num_classes, smoothing=0.1):
         super(LabelSmoothingLoss, self).__init__()
