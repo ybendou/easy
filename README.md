@@ -73,9 +73,9 @@ Some important arguments for our code.
 
 Experimental results on few-shot learning datasets with ResNet-12 backbone. We report our average results with 10000 randomly sampled episodes for both 1-shot and 5-shot evaluations.
 
-**MiniImageNet Dataset**
+**MiniImageNet Dataset (inductive)**
 
-|  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
+| Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
 |:--------:|:------------:|:------------:|
 |SimpleShot [29] |62.85 ± 0.20 |80.02 ± 0.14|
 |Baseline++ [30] |53.97 ± 0.79 |75.90 ± 0.61|
@@ -90,13 +90,13 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |inv-equ [39] |67.28 ± 0.80 |84.78 ± 0.50|
 |CSEI [40] |68.94 ± 0.28| 85.07 ± 0.50|
 |COSOC [9] |69.28 ± 0.49| 85.16 ± 0.42|
-|EASY 2×ResNet12 1/sqrt(2) (ours) |70.63 ± 0.20| 86.28 ± 0.12|
-|:--------:|:------------:|:------------:|
-|S2M2R [12] | 64.93 ± 0.18 | 83.18 ± 0.11 |
+|EASY 2×ResNet12 1/√2  (ours) |70.63 ± 0.20| 86.28 ± 0.12|
+|above <=12M|***nb of parameters***|below 36M|
+|3S2M2R [12] | 64.93 ± 0.18 | 83.18 ± 0.11 |
 |LR + DC [17] | 68.55 ± 0.55 | 82.88 ± 0.42 |
 |EASY 3×ResNet12 (ours) | 71.75 ± 0.19 | 87.15 ± 0.12 |
 
-**TieredImageNet Dataset**
+**TieredImageNet Dataset (inductive)**
 
 |  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
 |:--------:|:------------:|:------------:|
@@ -111,12 +111,12 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |invariance-equivariance [39] |72.21 ± 0.90| 87.08 ± 0.58|
 |CSEI [40] |73.76 ± 0.32| 87.83 ± 0.59|
 |ASY ResNet12 (ours)| 74.31 ± 0.22| 87.86 ± 0.15|
-|:--------:|:------------:|:------------:|
+|above <=12M|***nb of parameters***|below 36M|
 |S2M2R [12] |73.71 ± 0.22| 88.52 ± 0.14|
 |EASY 3×ResNet12 (ours) |74.71 ± 0.22| 88.33 ± 0.14|
 
 
-**CUBFS Dataset**
+**CUBFS Dataset (inductive)**
 
 |  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
 |:--------:|:------------:|:------------:|
@@ -125,12 +125,12 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |ProtoNet [10] |66.09 ± 0.92 |82.50 ± 0.58|
 |DeepEMD v2 [13] |79.27 ± 0.29| 89.80 ± 0.51|
 |EASY 4×ResNet12 1/sqrt(2) |77.97 ± 0.20 | 91.59 ± 0.10|
-|:--------:|:------------:|:------------:|
+|above <=12M|***nb of parameters***|below 36M|
 |S2M2R [12] | 80.68 ± 0.81 | 90.85 ± 0.44|
 |EASY 3×ResNet12 (ours) | 78.56 ± 0.19 | 91.93 ± 0.10 |
 
 
-**CIFAR-FS Dataset**
+**CIFAR-FS Dataset (inductive)**
 
 |  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
 |:--------:|:------------:|:------------:|
@@ -138,11 +138,11 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |R2-D2 (+ens) [20] | 76.51 ± 0.47 | 87.63 ± 0.34|
 |invariance-equivariance [39] | 77.87 ± 0.85 | 89.74 ± 0.57|
 |EASY 2×ResNet12 1/sqrt(2) (ours) | 75.24 ± 0.20 | 88.38 ± 0.14|
-|:--------:|:------------:|:------------:|
+|above <=12M|***nb of parameters***|below 36M|
 |S2M2R [12] |74.81 ± 0.19| 87.47 ± 0.13|
 |EASY 3×ResNet12 (ours) | 76.20 ± 0.20 | 89.00 ± 0.14|
 
-**FC-100 Dataset**
+**FC-100 Dataset (inductive)**
 
 |  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
 |:--------:|:------------:|:------------:|
@@ -152,5 +152,102 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |invariance-equivariance [39] |47.76 ± 0.77 | 65.30 ± 0.76|
 |R2-D2 (+ens) [20] | 44.75 ± 0.43 | 59.94 ± 0.41|
 |EASY 2×ResNet12 1/sqrt(2) (ours)| 47.94 ± 0.19 | 64.14 ± 0.19|
-|:--------:|:------------:|:------------:|
+|above <=12M|***nb of parameters***|below 36M|
 |EASY 3×ResNet12 (ours) | 48.07 ± 0.19 | 64.74 ± 0.19|
+
+
+**Minimagenet (transductive)**
+
+|  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
+|:--------:|:------------:|:------------:|
+|TIM-GD [42] |73.90| 85.00|
+|ODC [43] |77.20 ± 0.36 |87.11 ± 0.42|
+|PEMnE-BMS∗ [32] |80.56 ± 0.27| 87.98 ± 0.14|
+|SSR [44] |68.10 ± 0.60| 76.90 ± 0.40|
+|iLPC [45] |69.79 ± 0.99| 79.82 ± 0.55|
+|EPNet [31]| 66.50 ± 0.89 |81.60 ± 0.60|
+|DPGN [46] |67.77 ± 0.32| 84.60 ± 0.43|
+|ECKPN [47]| 70.48 ± 0.38| 85.42 ± 0.46|
+|Rot+KD+POODLE [48]| 77.56| 85.81|
+|EASY 2×ResNet12( 1√2) (ours) |81.70 ±0.25 |88.29 ±0.13|
+|above <=12M|***nb of parameters***|below 36M|
+|SSR [44] |72.40 ± 0.60 |80.20 ± 0.40|
+|fine-tuning(train+val) [49]| 68.11 ± 0.69| 80.36 ± 0.50|
+|SIB+E3BM [50] |71.40 |81.20|
+|LR+DC [17] |68.57 ± 0.55| 82.88 ± 0.42|
+|EPNet [31] |70.74 ± 0.85 |84.34 ± 0.53|
+|TIM-GD [42] |77.80 |87.40|
+|PT+MAP [51] |82.92 ± 0.26 |88.82 ± 0.13|
+|iLPC [45] |83.05 ± 0.79| 88.82 ± 0.42|
+|ODC [43] |80.64 ± 0.34| 89.39 ± 0.39|
+|PEMnE-BMS∗ [32] |83.35 ± 0.25| 89.53 ± 0.13|
+|EASY 3×ResNet12 (ours) |82.75 ±0.25 |88.93 ±0.12|
+
+**CUB-FS (transductive)**
+|  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
+|:--------:|:------------:|:------------:|
+|TIM-GD [42] |82.20| 90.80|
+|ODC [43]| 85.87| 94.97|
+|DPGN [46] |75.71 ± 0.47| 91.48 ± 0.33|
+|ECKPN [47]| 77.43 ± 0.54 |92.21 ± 0.41|
+|iLPC [45]| 89.00 ± 0.70| 92.74 ± 0.35|
+|Rot+KD+POODLE [48] |89.93| 93.78|
+|EASY 4×ResNet12( 1/2) (ours) |90.41 ± 0.19| 93.58 ± 0.10|
+|above <=12M|***nb of parameters***|below 36M|
+|LR+DC [17] |79.56 ± 0.87| 90.67 ± 0.35|
+|PT+MAP [51]| 91.55 ± 0.19| 93.99 ± 0.10|
+|iLPC [45] |91.03 ± 0.63| 94.11 ± 0.30|
+|EASY 3×ResNet12 (ours)| 90.76 ± 0.19| 93.90 ± 0.09|
+
+
+**CIFAR-FS (transductive)**
+
+|  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
+|:--------:|:------------:|:------------:|
+|SSR [44] |76.80 ± 0.60 |83.70 ± 0.40|
+|iLPC [45] |77.14 ± 0.95| 85.23 ± 0.55|
+|DPGN [46] |77.90 ± 0.50| 90.02 ± 0.40|
+|ECKPN [47] |79.20 ± 0.40| 91.00 ± 0.50|
+|EASY 2×ResNet12 (1/sqrt(2)) (ours) |86.40 ± 0.23 |89.75 ± 0.15|
+|above <=12M|***nb of parameters***|below 36M|
+|SSR [44] |81.60 ± 0.60| 86.00 ± 0.40|
+|fine-tuning (train+val) [49] |78.36 ± 0.70 |87.54 ± 0.49|
+|iLPC [45]| 86.51 ± 0.75| 90.60 ± 0.48|
+|PT+MAP [51] |87.69 ± 0.23| 90.68 ± 0.15|
+|EASY 3×ResNet12 (ours)| 86.96 ± 0.22| 90.30 ± 0.15|
+
+**FC-100 (transductive)**
+|  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
+|:--------:|:------------:|:------------:|
+|EASY 2×ResNet12( 1√2)(ours) |54.68 ± 0.25 |66.19 ± 0.20|
+|above <=12M|***nb of parameters***|below 36M|
+|SIB+E3BM [50] |46.00 |57.10|
+|fine-tuning (train) [49] |43.16 ± 0.59| 57.57 ± 0.55|
+|ODC [43]| 47.18 ± 0.30| 59.21 ± 0.56|
+|fine-tuning (train+val) [49]| 50.44 ± 0.68 |65.74 ± 0.60|
+|EASY 3×ResNet12 (ours)| 55.11 ± 0.25 |67.09 ± 0.20|
+
+**Tiered Imagenet (transducive)**
+|  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
+|:--------:|:------------:|:------------:|
+|PT+MAP [51] |85.67 ± 0.26| 90.45 ± 0.14|
+|TIM-GD [42] |79.90| 88.50|
+|ODC [43]| 83.73 ± 0.36 |90.46 ± 0.46|
+|SSR [44] |81.20 ± 0.60| 85.70 ± 0.40|
+|Rot+KD+POODLE [48] |79.67 |86.96|
+|DPGN [46] |72.45 ± 0.51 |87.24 ± 0.39|
+|EPNet [31] |76.53 ± 0.87 |87.32 ± 0.64|
+|ECKPN [47] |73.59 ± 0.45 |88.13 ± 0.28|
+|iLPC [45] |83.49 ± 0.88| 89.48 ± 0.47|
+|ASY ResNet12 (ours)| 82.66 ± 0.27 |88.60 ± 0.14|
+|above <=12M|***nb of parameters***|below 36M|
+|SIB+E3BM [50] |75.60 |84.30|
+|SSR [44] |79.50 ± 0.60| 84.80 ± 0.40|
+|fine-tuning (train+val) [49] |72.87 ± 0.71| 86.15 ± 0.50|
+|TIM-GD [42]| 82.10 |89.80|
+|LR+DC [17] |78.19 ± 0.25 |89.90 ± 0.41|
+|EPNet [31] |78.50 ± 0.91 |88.36 ± 0.57|
+|ODC [43] |85.22 ± 0.34| 91.35 ± 0.42|
+|iLPC [45] |88.50 ± 0.75| 92.46 ± 0.42|
+|PEMnE-BMS∗ [32]| 86.07 ± 0.25 |91.09 ± 0.14|
+|EASY 3×ResNet12 (ours)| 84.48 ± 0.27| 89.71 ± 0.14|
