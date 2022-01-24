@@ -55,6 +55,7 @@ Some important arguments for our code.
 **Training arguments**
 - `dataset`: choices=['miniimagenet', 'cubfs','tieredimagenet', 'fc100', 'cifarfs']
 - `model`: choices=['resnet12', 'resnet18', 'resnet20', 'wideresnet', 's2m2r']
+- `daatset-path`: path of the datasets folder which contains folders of all the datasets.
 
 **Few-shot Classification**
 - `preprocessing`: preprocessing sequence for few shot given as a string, can contain R:relu P:sqrt E:sphering and M:centering
