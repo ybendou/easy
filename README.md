@@ -28,19 +28,19 @@ Test features on miniimagenet using EASY (3xResNet12)
 
 
 ### Transductive setup using Soft k-means
-Test features on miniimagenet using Y
+Test features on miniimagenet using Y (ResNet12)
 
     $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11'--postprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
-Test features on miniimagenet using ASY
+Test features on miniimagenet using ASY (ResNet12)
 
     $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11' --postprocessing ME --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
-Test features on miniimagenet using EY
+Test features on miniimagenet using EY (3xResNet12)
 
     $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures3.pt11]" --postrocessing ME  --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
-Test features on miniimagenet using EASY
+Test features on miniimagenet using EASY (3xResNet12)
 
     $ python main.py --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures3.pt11]" --postrocessing ME  --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
