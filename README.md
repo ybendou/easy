@@ -154,7 +154,3 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |EASY 2×ResNet12 1/sqrt(2) (ours)| 47.94 ± 0.19 | 64.14 ± 0.19|
 |:--------:|:------------:|:------------:|
 |EASY 3×ResNet12 (ours) | 48.07 ± 0.19 | 64.74 ± 0.19|
-
-## Acknowledgment
-
-
