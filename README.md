@@ -24,7 +24,7 @@ Test features on miniimagenet using Y (Resnet12)
 
 Test features on miniimagenet using ASY (Resnet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11' --preprocessing ME --sample-aug 30
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeaturesAS1.pt11' --preprocessing ME
 
 Test features on miniimagenet using EY (3xResNet12)
 
@@ -42,7 +42,7 @@ Test features on miniimagenet using Y (ResNet12)
 
 Test features on miniimagenet using ASY (ResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11' --postprocessing ME --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeaturesAS1.pt11' --postprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
 Test features on miniimagenet using EY (3xResNet12)
 
