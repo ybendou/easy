@@ -32,7 +32,7 @@ Test features on miniimagenet using EY (3xResNet12)
     
 Test features on miniimagenet using EASY (3xResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures3.pt11]" --preprocessing ME --sample-aug 30
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeaturesAS1.pt11, <path>/minifeaturesAS2.pt11, <path>/minifeaturesAS3.pt11]" --preprocessing ME 
 
 
 ### Transductive setup using Soft k-means
@@ -50,7 +50,7 @@ Test features on miniimagenet using EY (3xResNet12)
 
 Test features on miniimagenet using EASY (3xResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures3.pt11]" --postrocessing ME  --sample-aug 30 --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeaturesAS1.pt11, <path>/minifeaturesAS2.pt11, <path>/minifeaturesAS3.pt11]" --postrocessing ME  --transductive --transductive-softkmeans --transductive-temperature-softkmeans 20
 
 ## Training scripts for Y
 Train a model on miniimagenet using manifold mixup, self-supervision and cosine scheduler
