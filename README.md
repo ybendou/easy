@@ -14,6 +14,10 @@ Each of the files (backbones and features) have the following prefixes depending
 | ResNet12(1/sqrt(2)) | small | 6M|
 | ResNet12(1/2) | tiny | 3M|
 
+Each of the features file is named as follow : 
+- if not AS : "<backbone_prefix><dataset_name>features<backbone_number>.pt11"
+- if AS     : "<backbone_prefix><dataset_name>featuresAS<backbone_number>.pt11"
+
 ## Testing scripts for EASY
 Run scripts to evaluate the features on FSL tasks for Y and ASY. For EY and EASY use the corresponding features.
 
