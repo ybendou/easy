@@ -15,8 +15,12 @@ Each of the files (backbones and features) have the following prefixes depending
 | ResNet12(1/2) | tiny | 3M|
 
 Each of the features file is named as follow : 
-- if not AS : "<backbone_prefix><dataset_name>features<backbone_number>.pt11"
-- if AS     : "<backbone_prefix><dataset_name>featuresAS<backbone_number>.pt11"
+- if not AS : "<backbone_prefix><dataset_name>features<backbone_number>.pt<backbone_suffix>"
+- if AS     : "<backbone_prefix><dataset_name>featuresAS<backbone_number>.pt<backbone_suffix>"
+
+Suffixes <backbone_suffix>: 
+- .pt11 : For 1-shot classification, the best backbone selected during training is based on the 1-shot performance of the validation dataset.
+- .pt55 : For 5-shot classification, the best backbone selected during training is based on the 5-shot performance of the validation dataset.
 
 ## Testing scripts for EASY
 Run scripts to evaluate the features on FSL tasks for Y and ASY. For EY and EASY use the corresponding features.
