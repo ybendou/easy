@@ -189,7 +189,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |iLPC [45] |83.05 ± 0.79| 88.82 ± 0.42|
 |ODC [43] |80.64 ± 0.34| 89.39 ± 0.39|
 |PEMnE-BMS∗ [32] |83.35 ± 0.25| 89.53 ± 0.13|
-|EASY 3×ResNet12 (ours) |82.75 ±0.25 |88.93 ±0.12|
+|EASY 3×ResNet12 (ours) |84.04 ±0.23 |89.14 ±0.11|
 
 **CUB-FS (transductive)**
 |  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
@@ -205,7 +205,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |LR+DC [17] |79.56 ± 0.87| 90.67 ± 0.35|
 |PT+MAP [51]| 91.55 ± 0.19| 93.99 ± 0.10|
 |iLPC [45] |91.03 ± 0.63| 94.11 ± 0.30|
-|EASY 3×ResNet12 (ours)| 90.76 ± 0.19| 93.90 ± 0.09|
+|EASY 3×ResNet12 (ours)| 90.56 ± 0.19| 93.79 ± 0.10|
 
 
 **CIFAR-FS (transductive)**
@@ -222,7 +222,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |fine-tuning (train+val) [49] |78.36 ± 0.70 |87.54 ± 0.49|
 |iLPC [45]| 86.51 ± 0.75| 90.60 ± 0.48|
 |PT+MAP [51] |87.69 ± 0.23| 90.68 ± 0.15|
-|EASY 3×ResNet12 (ours)| 86.96 ± 0.22| 90.30 ± 0.15|
+|EASY 3×ResNet12 (ours)| 87.16 ± 0.21| 90.47 ± 0.15|
 
 **FC-100 (transductive)**
 |  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
@@ -233,7 +233,7 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |fine-tuning (train) [49] |43.16 ± 0.59| 57.57 ± 0.55|
 |ODC [43]| 47.18 ± 0.30| 59.21 ± 0.56|
 |fine-tuning (train+val) [49]| 50.44 ± 0.68 |65.74 ± 0.60|
-|EASY 3×ResNet12 (ours)| 55.11 ± 0.25 |67.09 ± 0.20|
+|EASY 3×ResNet12 (ours)| 54.13 ± 0.24 |66.86 ± 0.19|
 
 **Tiered Imagenet (transducive)**
 |  Methods  | 1-Shot 5-Way | 5-Shot 5-Way |   
@@ -258,4 +258,4 @@ Experimental results on few-shot learning datasets with ResNet-12 backbone. We r
 |ODC [43] |85.22 ± 0.34| 91.35 ± 0.42|
 |iLPC [45] |88.50 ± 0.75| 92.46 ± 0.42|
 |PEMnE-BMS∗ [32]| 86.07 ± 0.25 |91.09 ± 0.14|
-|EASY 3×ResNet12 (ours)| 84.48 ± 0.27| 89.71 ± 0.14|
+|EASY 3×ResNet12 (ours)| 84.29 ± 0.24| 89.76 ± 0.14|
