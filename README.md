@@ -63,7 +63,7 @@ Test features on miniimagenet using EASY (3xResNet12)
 ## Training scripts for Y
 Train a model on miniimagenet using manifold mixup, self-supervision and cosine scheduler. The best backbone is based on the 1-shot performance in the validation set. In order to get the best 5-shot performing model during validation, change --n-shots to 5 :
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME --n-shots 1
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME --n-shots 1 --skip-epochs 450 --save-model "<path>/mini<backbone_number>.pt1"
 
 ## Important Arguments
 Some important arguments for our code.
@@ -72,6 +72,12 @@ Some important arguments for our code.
 - `dataset`: choices=['miniimagenet', 'cubfs','tieredimagenet', 'fc100', 'cifarfs']
 - `model`: choices=['resnet12', 'resnet18', 'resnet20', 'wideresnet', 's2m2r']
 - `dataset-path`: path of the datasets folder which contains folders of all the datasets.
+- `rotations` : if mentionned, self-supervision will be used during training.
+- `cosine` : if mentionned, cosine scheduler will be used during training.
+- `save-model`: path where to save the best model based on validation data.
+- `manifold-mixup`: number of epochs where to use manifold-mixup.
+- `skip-epochs`: number of epochs to skip before evaluating few-shot performance. Used to speed-up training.
+- `n-shots` : how many shots per few-shot run, can be int or list of ints. 
 
 **Few-shot Classification**
 - `preprocessing`: preprocessing sequence for few shot given as a string, can contain R:relu P:sqrt E:sphering and M:centering using the base data.
