@@ -23,47 +23,47 @@ Suffixes <backbone_suffix>:
 - .pt55 : For 5-shot classification, the best backbone selected during training is based on the 5-shot performance of the validation dataset.
 
 ## Testing scripts for EASY
-Run scripts to evaluate the features on FSL tasks for Y and ASY. For EY and EASY use the corresponding features.
+Run scripts to evaluate the features on FSL tasks for Y and ASY. For EY and EASY use the corresponding features in 1-shot setting. For 5-shot setting, change --n-shots to 5
 
 ### Inductive setup using NCM
 Test features on miniimagenet using Y (Resnet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11' --preprocessing ME
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11' --preprocessing ME --n-shots 1
 
 Test features on miniimagenet using ASY (Resnet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeaturesAS1.pt11' --preprocessing ME
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeaturesAS1.pt11' --preprocessing ME --n-shots 1
 
 Test features on miniimagenet using EY (3xResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures3.pt11]" --preprocessing ME
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures3.pt11]" --preprocessing ME --n-shots 1
     
 Test features on miniimagenet using EASY (3xResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeaturesAS1.pt11, <path>/minifeaturesAS2.pt11, <path>/minifeaturesAS3.pt11]" --preprocessing ME 
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeaturesAS1.pt11, <path>/minifeaturesAS2.pt11, <path>/minifeaturesAS3.pt11]" --preprocessing ME --n-shots 1
 
 
 ### Transductive setup using Soft k-means
 Test features on miniimagenet using Y (ResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11'--postprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 5
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeatures1.pt11'--postprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 5 --n-shots 1
 
 Test features on miniimagenet using ASY (ResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeaturesAS1.pt11' --postprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 5
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features '<path>/minifeaturesAS1.pt11' --postprocessing ME --transductive --transductive-softkmeans --transductive-temperature-softkmeans 5 --n-shots 1
 
 Test features on miniimagenet using EY (3xResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures3.pt11]" --postrocessing ME  --transductive --transductive-softkmeans --transductive-temperature-softkmeans 5
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeatures1.pt11, <path>/minifeatures2.pt11, <path>/minifeatures3.pt11]" --postrocessing ME  --transductive --transductive-softkmeans --transductive-temperature-softkmeans 5 --n-shots 1
 
 Test features on miniimagenet using EASY (3xResNet12)
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeaturesAS1.pt11, <path>/minifeaturesAS2.pt11, <path>/minifeaturesAS3.pt11]" --postrocessing ME  --transductive --transductive-softkmeans --transductive-temperature-softkmeans 5
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --test-features "[<path>/minifeaturesAS1.pt11, <path>/minifeaturesAS2.pt11, <path>/minifeaturesAS3.pt11]" --postrocessing ME  --transductive --transductive-softkmeans --transductive-temperature-softkmeans 5 --n-shots 1
 
 ## Training scripts for Y
-Train a model on miniimagenet using manifold mixup, self-supervision and cosine scheduler
+Train a model on miniimagenet using manifold mixup, self-supervision and cosine scheduler. The best backbone is based on the 1-shot performance in the validation set. In order to get the best 5-shot performing model during validation, change --n-shots to 5 :
 
-    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME 
+    $ python main.py --dataset-path "<dataset-path>" --dataset miniimagenet --model resnet12 --epochs 0 --manifold-mixup 500 --rotations --cosine --gamma 0.9 --milestones 100 --batch-size 128 --preprocessing ME --n-shots 1
 
 ## Important Arguments
 Some important arguments for our code.
