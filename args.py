@@ -36,6 +36,7 @@ python main.py --device cuda:012 --dataset miniimagenet --model S2M2R --lr -0.00
 
 ### hyperparameters
 parser.add_argument("--batch-size", type=int, default=64, help="batch size")
+parser.add_argument("--batch-fs", type=int, default=100, help="batch size for few shot runs")
 parser.add_argument("--feature-maps", type=int, default=64, help="number of feature maps")
 parser.add_argument("--lr", type=float, default="0.1", help="initial learning rate (negative is for Adam, e.g. -0.001)")
 parser.add_argument("--epochs", type=int, default=350, help="total number of epochs")

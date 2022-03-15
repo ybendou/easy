@@ -4,7 +4,7 @@ from args import *
 from utils import *
 
 n_runs = args.n_runs
-batch_few_shot_runs = 100
+batch_few_shot_runs = args.batch_fs
 assert(n_runs % batch_few_shot_runs == 0)
 
 def define_runs(n_ways, n_shots, n_queries, num_classes, elements_per_class):
